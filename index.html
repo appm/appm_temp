@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AppM</title>
+	<link rel="stylesheet" href="frameworks/jquery-mobile.css">
+	<script src="frameworks/jquery.js"></script>
+	<script src="frameworks/jquery-mobile.js"></script>
+
+	<style>
+
+		#splash {
+			width: 100%;
+			height: 100%;
+			background: #DF2624;
+			display: table;
+			text-align: center;
+			margin-top: -500;
+
+		}
+
+		#app_logo {
+			display: table-cell;
+			vertical-align: middle;
+			font-size: 400%;
+			font-family: tahoma;
+			font-weight: bold;
+			color: white;
+			padding-bottom: 30%;
+		}
+		
+	</style>
+
+	<script>
+
+		var backupFunction;
+
+		$(function() {
+
+			// workaround loading message issue
+			backupFunction = $.mobile.showPageLoadingMsg;
+			$.mobile.showPageLoadingMsg = function() {}
+
+			// show splash during 2 sec
+			var splashTimer = setTimeout(function() {
+
+				$.mobile.changePage("./ui/template.ui", "fade");
+			}, 2000);
+		});
+
+	</script>
+</head>
+<body>
+	<div id="splash" data-role="page">
+		<div id="app_logo">AppM</div>
+	</div>
+</body>
+</html>

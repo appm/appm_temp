@@ -1,0 +1,13 @@
+<div id="template" data-role="page">
+	<div data-role="header">
+		<h1>Template</h1>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview">
+			<li>2 depth navigation</li>
+			<li>tab view</li>
+		</ul>
+	</div>
+	<script src="template.js"></script>
+</div>
+
